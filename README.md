@@ -3,4 +3,4 @@
 
 Clones the [IntelBluetoothFirmware](https://github.com/OpenIntelWireless/IntelBluetoothFirmware), [itlwm](https://github.com/OpenIntelWireless/itlwm) and [MacKernelSDK](https://github.com/acidanthera/MacKernelSDK) repos to build "IntelBluetoothFirmware.kext" and "AirportItlwm.kext" and remove unnecessary firmware. 
 
-Only for Ventura - Made for personal use to make slim down boot times
+Only for Ventura - Made for personal use to slim down boot times
