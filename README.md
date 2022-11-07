@@ -5,4 +5,4 @@ Clones the [IntelBluetoothFirmware](https://github.com/OpenIntelWireless/IntelBl
 
 Only for Ventura - Made for personal use to slim down boot times
 
-Credits to [Racka98](https://github.com/racka98) - ([post](https://github.com/OpenIntelWireless/itlwm/issues/353#issuecomment-727190996) 
+Credits to [Racka98](https://github.com/racka98) - ([post](https://github.com/OpenIntelWireless/itlwm/issues/353#issuecomment-727190996))
