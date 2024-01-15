@@ -1,4 +1,4 @@
-# AX200-hackintosh
+# AX200-MacOS
 ### Easy All-In-One script to build wifi and bluetooth kexts for the AX200 Wifi/Bluetooth card
 
 Clones the [IntelBluetoothFirmware](https://github.com/OpenIntelWireless/IntelBluetoothFirmware), [itlwm](https://github.com/OpenIntelWireless/itlwm) and [MacKernelSDK](https://github.com/acidanthera/MacKernelSDK) repos to build "IntelBluetoothFirmware.kext" and "AirportItlwm.kext", then remove unnecessary firmware. 
