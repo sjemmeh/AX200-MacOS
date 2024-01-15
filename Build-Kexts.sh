@@ -7,6 +7,8 @@
 ######################
 # Check requirements #
 ######################
+# Variables
+MACOS_VERSION=Sonoma
 
 # Check if xcode is installed
 xcode-select -p 1>/dev/null; 
@@ -30,11 +32,11 @@ fi
 cd "$(dirname "$0")"
 
 # Delete folders if they exist
-[ -d "./ventura-bt-wifi-kexts/" ] && rm -Rf ./ventura-bt-wifi-kexts/
+[ -d "./$MACOS_VERSION-bt-wifi-kexts/" ] && rm -Rf ./$MACOS_VERSION-bt-wifi-kexts/
 
 #(Re-)Create folders
-mkdir ventura-bt-wifi-kexts
-cd ventura-bt-wifi-kexts
+mkdir $MACOS_VERSION-bt-wifi-kexts
+cd $MACOS_VERSION-bt-wifi-kexts
 
 # Clone Repos
 git clone https://github.com/OpenIntelWireless/IntelBluetoothFirmware.git
@@ -78,11 +80,11 @@ find itlwm/firmware/ -type f ! -name 'iwlwifi*' -delete
 xcodebuild -project itlwm.xcodeproj -target fw_gen -configuration Release -sdk macosx
 
 ## AirportItlwm Ventura - Change to your MacOS version
-xcodebuild -project itlwm.xcodeproj -target AirportItlwm-Ventura -configuration Release -sdk macosx
+xcodebuild -project itlwm.xcodeproj -target AirportItlwm-$MACOS_VERSION -configuration Release -sdk macosx
 
 # Move kext to folder and remove
 cd .. 
-mv ./itlwm/build/Release/Ventura/AirportItlwm.kext ./
+mv ./itlwm/build/Release/$MACOS_VERSION/AirportItlwm.kext ./
 rm -Rf itlwm
 
 # Done - Clear
